@@ -4,9 +4,9 @@
 file_get_contents works well for static page but when working with spider scripts that gather data from real websites, it doesn't meet all the requirements.
 
 phpFileDownload has been made to do:
-	1 Automatic Cookies Management
-	2 Easy to do POST Data
-	3 Handling Location Redirect
+* Automatic Cookies Management
+* Easy to do POST Data
+* Handling Location Redirect
 
 ### Example
 
