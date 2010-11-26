@@ -9,9 +9,16 @@ phpFileDownload has been written to make those tasks convenient.
 * Easy to do POST Data
 * Handling Location Redirect
 
+### Prototype
+The class is extremely simple. There's one get() function that works like file_get_contents with a second parameter to tell the POST content. The cookies are stored in a simple associative array.
+	class FileDownload() {
+		public function get($url, $post_content = NULL);
+		public $cookies;
+	}
+
 ### Example
 
-A common task your spider want to execute is to login on a forum and access private pages there. Doing this is only achieved in two functions call.
+A common task your spider want to execute is to login on a forum and access private pages there. Doing this is achieved with only two functions call.
 
 	$fd = new FileDownload();
 
