@@ -20,21 +20,23 @@ The class is extremely simple. There is a get() function that works like file_ge
 
 A common task your spider want to execute is to login on a forum and access private pages there. Doing this is achieved with only two functions call.
 
-	$fd = new FileDownload();
+```ruby
+$fd = new FileDownload();
 
-	// Login Phase: 
-	// It logs in by following the many redirects 
-	// and by settings all the required cookies
+// Login Phase: 
+// It logs in by following the many redirects 
+// and by settings all the required cookies
 
-	$fd->get('http://some-forum.com/login.php?do=login', // URL
-			 'vb_login_username=vjeux&vb_login_password=!@#$%^&*'); // POST Data
+$fd->get('http://some-forum.com/login.php?do=login', // URL
+		 'vb_login_username=vjeux&vb_login_password=!@#$%^&*'); // POST Data
 
-	// Optional:
-	// You can view / edit the cookies using the variable $fd->cookies
+// Optional:
+// You can view / edit the cookies using the variable $fd->cookies
 
-	print_r($fd->cookies);
+print_r($fd->cookies);
 
-	// Spider Phase:
-	// You are now logged in, get any page you need
+// Spider Phase:
+// You are now logged in, get any page you need
 
-	$page = $fd->get('http://some-forum.com/search.php?do=finduser&userid=12345');
+$page = $fd->get('http://some-forum.com/search.php?do=finduser&userid=12345');
+```
